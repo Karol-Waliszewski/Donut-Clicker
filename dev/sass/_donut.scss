@@ -1,0 +1,22 @@
+.donut {
+    cursor: pointer;
+    transition: 100ms;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:active {
+        transform: scale(1.15);
+    }
+}
+
+.donut__frostig {
+    fill: #FAD8D6;
+}
+
+.donut__topping {
+    fill: #704E2E;
+}
+
+.donut__cake {
+    fill: #EDB88B;
+}

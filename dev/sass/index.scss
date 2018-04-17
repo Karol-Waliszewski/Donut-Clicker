@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:400,700,900&subset=latin-ext");
+// ------------ //
+@import 'vars';
+@import 'grid';
+@import 'clickArea';
+@import 'donut';
+@import 'infoArea';
+@import 'statsArea';
+@import 'upgrader';
+// ------------ //
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+
+body {
+    background-color: $yellowFlat;
+}

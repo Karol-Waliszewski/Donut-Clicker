@@ -1,0 +1,41 @@
+.container {
+    max-width: 1200px;
+    height: 100vh;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    position: relative;
+}
+
+.row {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    background: $whiteFlat;
+    padding: {
+        top: 5vh;
+        bottom: 5vh;
+    }
+}
+
+.row--column {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.col-1in3 {
+    flex: 2;
+}
+
+.col-2in3 {
+    flex: 3;
+}
+
+.col {
+    flex: 1;
+}

@@ -1,0 +1,27 @@
+.clickArea {
+    padding: 5vh 50/16*1rem;
+    position: relative;
+}
+
+.clickArea__label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    width: 80%;
+    text-align: center;
+    font-size: 26/16*1rem;
+    padding: 3px 10px;
+    background: $yellowFlat;
+    color: #fff;
+}
+
+.clickArea__label--number {
+    font-weight: 700;
+}
+
+#moneyPerTime {
+    &::after {
+        content: '$';
+    }
+}

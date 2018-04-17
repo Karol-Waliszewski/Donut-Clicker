@@ -1,0 +1,66 @@
+$upgraderHeight: 60px;
+.upgrader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-direction: row;
+    margin: {
+        top: 5%;
+        bottom: 5%;
+    }
+    color: #ecf0f1;
+}
+
+.upgrader.disabled {
+    .upgrader__label {
+        background-color: #bbb;
+    }
+    .upgrader__btn {
+        background-color: #999;
+        cursor: not-allowed;
+    }
+}
+
+.upgrader__label {
+    height: $upgraderHeight;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f39c12;
+}
+
+.upgrader__name {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22/16 *1rem;
+}
+
+.upgrader__level {
+    flex: 1;
+    font-weight: 700;
+    font-size: 26/16 *1rem;
+}
+
+.upgrader__btn {
+    cursor: pointer;
+    border: none;
+    width: 10%;
+    height: $upgraderHeight;
+    background-color: #db8b0b;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30/16 *1rem;
+    font-weight: 500;
+    transition: 200ms;
+    &:hover {
+        //font-weight: 700;
+        background-color: darken($yellowFlat, 10%);
+    }
+}

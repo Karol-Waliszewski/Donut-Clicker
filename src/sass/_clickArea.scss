@@ -25,3 +25,9 @@
         content: '$';
     }
 }
+
+@media (max-width: 650px){
+  .clickArea {
+      padding-top: 12vh;
+  }
+}

@@ -1,35 +1,34 @@
 const DonutModule = (function () {
 
-    // DOM 
+    // DOM
     var $donut = document.querySelector('#donut'),
         $clicks = document.querySelector('#clicks'),
         $money = document.querySelector('#money');
 
-
-    // Variables 
+    // Variables
     var moneyOnClick = 1,
         moneyPerTime = 1,
         moneyEveryTime = 120 * 1000;
 
-    // Methods 
+    // Methods
     var countClick = function () {
         let value = parseInt($clicks.innerHTML);
         value++;
         $clicks.innerHTML = value;
-    }
+    };
 
     var clickMoney = function () {
         let value = parseInt($money.innerHTML);
         value += moneyOnClick;
         $money.innerHTML = value;
-    }
+    };
 
     var timeMoney = function () {
         let value = parseInt($money.innerHTML);
         value += moneyPerTime;
         $money.innerHTML = value;
         setTimeout(timeMoney, moneyEveryTime);
-    }
+    };
 
     // Object
     var Upgrade = function (options) {
@@ -43,9 +42,9 @@ const DonutModule = (function () {
         if (options.hasOwnProperty('statElement')) {
             this.sE = options.statElement;
         }
-    }
+    };
 
-    // Object Methods 
+    // Object Methods
     Upgrade.prototype.boost = function () {
         let value = parseInt($money.innerHTML);
         if (value < this.rM) {
@@ -60,7 +59,6 @@ const DonutModule = (function () {
             this.oM = parseInt(this.oM * this.uM);
 
             if (this.hasOwnProperty('sE')) {
-                console.log(this.oM)
                 this.sE.innerHTML = this.oM;
             }
 
@@ -68,12 +66,12 @@ const DonutModule = (function () {
                 let color = getRandomColor();
                 this.dE.forEach(function (item) {
                     item.style.fill = color;
-                })
+                });
             }
 
             return parseInt(this.oM);
         }
-    }
+    };
 
     Upgrade.prototype.checkUpgradeAvailable = function () {
         let value = parseInt($money.innerHTML);
@@ -100,7 +98,7 @@ const DonutModule = (function () {
         requiredMoney: 250,
         obtainedMoney: 120,
         moneyMultiplier: 3,
-        upgradeMultiplier: 0.5,
+        upgradeMultiplier: 0.8,
         btnElement: document.querySelector('#timeUpgrade'),
         statElement: document.querySelector('#moneyEveryTime'),
         donutElement: document.querySelectorAll('.donut__frostig')
@@ -121,7 +119,7 @@ const DonutModule = (function () {
     $donut.addEventListener('click', function () {
         countClick();
         clickMoney();
-    })
+    });
 
     $donut.addEventListener('mousedown', function (e) {
         e.preventDefault();

@@ -39,3 +39,14 @@
 .col {
     flex: 1;
 }
+
+@media (max-width: 650px){
+  .row {
+    display: block;
+    position: static;
+    transform: none;
+  }
+  .row--column {
+      flex-direction: column-reverse;
+  }
+}

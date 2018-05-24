@@ -1,26 +1,39 @@
 .donut {
-    cursor: pointer;
-    transition: 100ms;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    &:hover {
-        transform: scale(1.1);
-    }
-    &:active {
-        transform: scale(1.15);
-    }
+  cursor: pointer;
+  transition: 100ms;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1.15);
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .donut__frostig {
-    fill: #FAD8D6;
+  fill: #FAD8D6;
 }
 
 .donut__topping {
-    fill: #704E2E;
+  fill: #704E2E;
 }
 
 .donut__cake {
-    fill: #EDB88B;
+  fill: #EDB88B;
 }

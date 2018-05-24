@@ -1,6 +1,6 @@
 {
   "name": "Donut Clicker",
-  "short_name": "Clicker",
+  "short_name": "Donut Clicker",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ecf0f1",

@@ -17,7 +17,9 @@ var Upgrade = function(options) {
 
 // METHODS
 Upgrade.prototype.boost = function(money) {
+  
   if (money < this.rM) {
+    console.log(this.oM * this.uM);
     return false;
   } else {
     this.level++;
@@ -32,7 +34,7 @@ Upgrade.prototype.boost = function(money) {
     this.setColor(getRandomColor());
     return {
       newMoney,
-      newUpgrade: parseInt(this.oM)
+      newUpgrade: this.oM
     };
   }
 };

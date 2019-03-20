@@ -95,9 +95,10 @@ const clickerModule = (function() {
 
     clickUpgrade.btn.addEventListener('click', function() {
       let results = clickUpgrade.boost(money);
+
       if (results) {
         updateMoney(results.newMoney);
-        moneyPerTime = results.newUpgrade;
+        moneyOnClick = results.newUpgrade;
         Database.save('moneyOnClick', {
           color: clickUpgrade.eC,
           level: clickUpgrade.level

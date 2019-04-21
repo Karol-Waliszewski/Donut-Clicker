@@ -46,7 +46,7 @@ exports.save = function(key, value) {
       console.error('[IndexedDB] Error: ' + e);
     };
   } else {
-    alert('Open database at first');
+    console.error('Open database at first');
     return false;
   }
 };
@@ -60,7 +60,7 @@ exports.load = function(callback) {
       callback(request.result);
     };
   } else {
-    alert('Open database at first');
+    console.error('Open database at first');
     return false;
   }
 };
